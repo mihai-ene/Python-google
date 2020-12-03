@@ -1,7 +1,7 @@
 def your_function(*args):
 	sum = 0
 	for i in args:
-		if isinstance(i,int):
+		if isinstance(i,bool)!=True and isinstance(i,int) or isinstance(i,float): 
 			sum += i
 	return sum
 
@@ -29,7 +29,11 @@ def sumimpara(n):
 ################################################
 
 def citire():
-	a = int(input("Introduceti valoarea:"))
-	print(f"{a} este numar intreg")
+	a = input("Introduceti valoarea:")
+	try:
+		valoare = int(a)
+	except ValueError:
+		return None
+	return valoare
 
 
